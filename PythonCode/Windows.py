@@ -88,7 +88,8 @@ while (True):
 			break
 		elif keypress &0xff == ord('r'):			
 			#reset the camera
-			background = None
+			camera.release()
+			reset_camera()
 
 cv2.destroyAllWindows()
 camera.release()
