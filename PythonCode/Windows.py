@@ -24,6 +24,11 @@ videoWriter = cv2.VideoWriter('C:\\basic_motion_detection.avi',
 				  cv2.VideoWriter_fourcc('D', 'I', 'V', 'X'),
 				  fps, size)
 
+def reset_camera():
+	#Reset the current program.
+	python = sys.executable
+	os.execl(python, python, * sys.argv)
+
 initial = int(time.time())
 final = initial + 4
 
