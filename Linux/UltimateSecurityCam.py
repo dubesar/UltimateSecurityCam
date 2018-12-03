@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import pygame
 import time, sys, os
-
+import send_message
 #if you get error while importing the google how to install <Package Name> in python 3.6
 
 THRESHOLD = 40
@@ -90,6 +90,7 @@ while (True):
 			#reset the camera
 			camera.release()
 			reset_camera()
+			send_message.sendmessage()
 
 cv2.destroyAllWindows()
 camera.release()
